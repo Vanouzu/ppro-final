@@ -2,3 +2,12 @@
 project setup --topLevelPackage uhk.vanouzu1 --projectName "Programko" --java 8 --multimodule STANDARD
 // Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2018-02-01 18:59:24
 // Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2018-02-01 18:59:28
+jpa setup --provider HIBERNATE --database ORACLE --databaseName xe --userName projekt_DORDB_test --password projekt_DORDB_test
+module focus --moduleName model
+enum type --class ~.Pozice
+enum constant --name asistent
+enum constant --name ucetni
+enum constant --name lektor
+enum type --class ~.platce_DPH
+enum constant --name ANO
+enum constant --name NE
