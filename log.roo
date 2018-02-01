@@ -11,3 +11,46 @@ enum constant --name lektor
 enum type --class ~.platce_DPH
 enum constant --name ANO
 enum constant --name NE
+entity jpa --class ~.Mistnost --identifierColumn id_mist --plural Mistnosti 
+field string --fieldName nazev 
+field number --fieldName kapacita --type int
+field number --fieldName avg_obsazenost --type int
+entity projection --class model:~MistnostInfo --entity ~.Mistnost --fields id,nazev,kapacita,avg_obsazenost --entityFormatExpression #{nazev}
+repository jpa --entity ~.Mistnost --interface repository:~.MistnostRepository --defaultReturnType ~.MistnostInfo 
+service --all
+web mvc setup
+web mvc view setup --type THYMELEAF 
+web mvc templates setup --type THYMELEAF 
+web mvc controller --entity ~.Mistnost --responseType THYMELEAF 
+focus --class model:~.Mistnost
+focus --class repository:~.MistnostRepository
+focus --class model:~.Mistnost
+// [failed] finder add --entity ~.Mistnost --name findByNazev
+// [failed] finder add --entity ~.Mistnost --name findByNazev --formBean ~.MistnostInfo
+// [failed] finder add --entity ~.Mistnost --name findByNazev
+// [failed] finder add --entity ~.Mistnost --name findByNazev --formBean ~.MistnostInfo
+dto --class ~.MistnostFormBean
+field string --fieldName nazev
+// [failed] finder add --entity ~.Mistnost --name findByNazev --formBean ~.MistnostInfo
+// [failed] finder add --entity ~.Mistnost --name findByNazev --formBean ~.MistnostFormBean
+repository jpa --entity ~.Mistnost --interface repository:~.MistnostRepository --defaultReturnType ~.MistnostInfo 
+// [failed] finder add --entity ~.Mistnost --name findByNazev
+// [failed] finder add --entity ~.Mistnost --name findByNazev --returnType ~.MistnostInfo --formBean ~.MistnostFormBean
+// [failed] finder add --entity ~.Mistnost --name findByNazev --returnType ~.MistnostInfo --formBean ~.MistnostFormBean
+// [failed] finder add --entity ~.Mistnost --name findByNazev
+repository jpa --entity ~.Mistnost --interface repository:~.MistnostRepositoryCor
+// [failed] finder add --entity ~.Mistnost --name findByNazev
+focus --class model:~.Mistnost
+// [failed] finder add --entity ~.Mistnost --name findByNazev
+// [failed] finder add --entity ~.Mistnost --name findByNazev --formBean ~.MistnostFormBean
+exit
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2018-02-01 22:28:13
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2018-02-01 22:28:32
+// [failed] finder add --entity ~.Mistnost --name findByNazev
+focus --class model:~.Mistnost
+// [failed] finder add --entity ~.Mistnost --name findByNazev
+// [failed] finder add --entity ~.Mistnost --name findByNazev --formBean ~.MistnostFormBean
+repository jpa --all 
+web mvc detail --entity ~.Mistnost --responseType THYMELEAF --views list,show
+web mvc controller --entity ~.Mistnost --responseType THYMELEAF 
+web mvc detail --entity ~.Mistnost --responseType THYMELEAF --views list,show

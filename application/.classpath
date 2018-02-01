@@ -28,5 +28,10 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/Programko.model"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Programko.integration"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Programko.repository"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Programko.service-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Programko.service-impl"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
